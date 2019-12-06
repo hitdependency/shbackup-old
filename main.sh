@@ -33,6 +33,8 @@ PrintHelp () {
 # SSH_KEY_PATH=${SH_HOME}/skey
 # SSH_MASTER_NODE=user@127.0.0.1
 
+source .env
+
 #######################################################
 # Backup() import client for every project
 #######################################################
