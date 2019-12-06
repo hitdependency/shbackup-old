@@ -128,7 +128,7 @@ SendNotification () {
 UpdateReport () {
   REPORT_STRING=$1
   SED_STRING="s/v${CLIENT}v/${REPORT_STRING}/g"
-  ssh -i ${KEY_PATH} ${MASTER_NODE} "sed -i '${SED_STRING}' ${REPORT_PATH}"
+  ssh -i ${SSH_KEY_PATH} ${SSH_MASTER_NODE} "sed -i '${SED_STRING}' ${REPORT_PATH}"
 }
 
 #######################################################
