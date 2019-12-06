@@ -13,10 +13,10 @@ main.sh --help                  - to get this message
 ```
 # Installation
 
-0. Create mount directory
-0. Create .env file
-0. Create ssh key
-0. Add to crontab
+1. Create mount directory
+2. Create .env file
+3. Create ssh key
+4. Add to crontab
 
 ## .env example
 ```bash
