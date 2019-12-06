@@ -136,10 +136,10 @@ UpdateReport () {
 #######################################################
 
 SendReport () {
+  cp ${REPORT_PATH_TEMP} ${REPORT_PATH}  
   sed -i "s/vDATEv/$(date +%F)/" ${REPORT_PATH}
   REPORT_TEXT=$(<${REPORT_PATH})
   SendNotification "${REPORT_TEXT}"
-  cp ${REPORT_PATH_TEMP} ${REPORT_PATH}
 }
 
 #######################################################
