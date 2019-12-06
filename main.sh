@@ -21,7 +21,7 @@ PrintHelp () {
 # .env example
 #######################################################
 
-# SH_HOME=/shbackup
+SH_HOME=/shbackup
 # TG_BOT_TOKEN=80853:AAHpfEqj2RmYXEZpjfK-p_amnI
 # TG_CHAT_ID=-000000000
 # REPORT_PATH=${SH_HOME}/report.txt
@@ -33,7 +33,7 @@ PrintHelp () {
 # SSH_KEY_PATH=${SH_HOME}/skey
 # SSH_MASTER_NODE=user@127.0.0.1
 
-source .env
+source ${SH_HOME}/.env
 
 #######################################################
 # Backup() import client for every project
@@ -136,7 +136,9 @@ UpdateReport () {
 #######################################################
 
 SendReport () {
-  SendNotification $(<${REPORT_PATH})
+  sed -i "s/vDATEv/$(date +%F)/" ${REPORT_PATH}
+  REPORT_TEXT=$(<${REPORT_PATH})
+  SendNotification "${REPORT_TEXT}"
   cp ${REPORT_PATH_TEMP} ${REPORT_PATH}
 }
 
