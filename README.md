@@ -2,6 +2,14 @@
 
 Backup main services with manual .sh scripts and master node report
 
+# Installation
+
+* git clone
+* mkdir mnt
+* create .env file
+* create ssh key
+* add to crontab
+
 ## .env example
 ```bash
 SH_HOME=/shbackup
