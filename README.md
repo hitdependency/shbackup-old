@@ -1,3 +1,5 @@
+eew
+
 # SHbackup
 
 Bash script that provides sending anything to sftp
